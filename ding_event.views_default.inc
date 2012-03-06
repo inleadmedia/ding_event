@@ -17,7 +17,7 @@ function ding_event_views_default_views() {
   $view->base_table = 'node';
   $view->human_name = 'Ding event';
   $view->core = 7;
-  $view->api_version = '3.0-alpha1';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
@@ -655,12 +655,15 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_category']['table'] = 'field_data_field_category';
   $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
   $handler->display->display_options['fields']['field_category']['label'] = '';
-  $handler->display->display_options['fields']['field_category']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_category']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_category']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_category']['alter']['text'] = '[field_category]';
+  $handler->display->display_options['fields']['field_category']['alter']['make_link'] = 1;
+  $handler->display->display_options['fields']['field_category']['alter']['path'] = 'events/[field_category]';
   $handler->display->display_options['fields']['field_category']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['external'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_category']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_category']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['field_category']['alter']['trim_whitespace'] = 1;
   $handler->display->display_options['fields']['field_category']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['field_category']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['field_category']['alter']['ellipsis'] = 1;
@@ -674,6 +677,7 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['field_category']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_category']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_category']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_category']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_category']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -778,6 +782,8 @@ function ding_event_views_default_views() {
     t('Library teaser list'),
     t('Library Feed'),
     t('Full list'),
+    t('[field_category]'),
+    t('events/[field_category]'),
     t('View panes'),
   );
   $export['ding_event'] = $view;
