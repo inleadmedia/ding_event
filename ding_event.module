@@ -67,12 +67,12 @@ function theme_date_time_seperate_lines($vars) {
   if (isset($vars['dates'])) {
     $dates = $vars['dates'];
     $time = $dates['value']['formatted_time'];
-    $date = format_date(strtotime($dates['value']['formatted_iso']), 'date_only');
+    $date = date('j. M', strtotime($dates['value']['formatted_iso']));
 
-    return '<div class="time field-label-inline clearfix"><div class="field-label">' . t('Time:') . '</div>' .
-      '<div class="field-items">' . $time . '</div></div>' .
-      '<div class="date field-label-inline clearfix"><div class="field-label">' . t('Date:') . '</div>' .
-      '<div class="field-items">' . $date . '</div></div>';
+    return '<div class="time field-label-inline clearfix">' .
+      '<div class="field-items">' . $date . '</div></div>' .
+      '<div class="date field-label-inline clearfix"><div class="field-label">' . t('Time:') . '</div>' .
+      '<div class="field-items">' . $time . '</div></div>';
   }
   return FALSE;
 }
