@@ -177,11 +177,44 @@ function ding_event_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = 0;
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Date and time */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_event_date']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_event_date']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_event_date']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_event_date']['type'] = 'calendar_page';
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  $handler->display->display_options['fields']['field_event_date']['field_api_classes'] = 0;
   /* Field: Content: List image */
   $handler->display->display_options['fields']['field_list_image']['id'] = 'field_list_image';
   $handler->display->display_options['fields']['field_list_image']['table'] = 'field_data_field_list_image';
   $handler->display->display_options['fields']['field_list_image']['field'] = 'field_list_image';
   $handler->display->display_options['fields']['field_list_image']['label'] = '';
+  $handler->display->display_options['fields']['field_list_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_list_image']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['field_list_image']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_list_image']['alter']['absolute'] = 0;
@@ -234,39 +267,6 @@ function ding_event_views_default_views() {
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Field: Content: Date and time */
-  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
-  $handler->display->display_options['fields']['field_event_date']['label'] = '';
-  $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_event_date']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_event_date']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_event_date']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_event_date']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_event_date']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['hide_alter_empty'] = 0;
-  $handler->display->display_options['fields']['field_event_date']['type'] = 'calendar_page';
-  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'long',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_repeat_rule' => 'show',
-  );
-  $handler->display->display_options['fields']['field_event_date']['field_api_classes'] = 0;
   /* Field: Content: Date and time */
   $handler->display->display_options['fields']['field_event_date_1']['id'] = 'field_event_date_1';
   $handler->display->display_options['fields']['field_event_date_1']['table'] = 'field_data_field_event_date';
